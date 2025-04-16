@@ -45,7 +45,7 @@
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
     <a-nft
       type="nft"
-      url="./bowl"
+      url="./bowl/"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
@@ -62,5 +62,10 @@
     <!-- static camera that moves according to the device movemenents -->
     <a-entity camera></a-entity>
   </a-scene>
+  <script>
+  document.querySelector('a-scene').addEventListener('loaded', () => {
+    document.querySelector('.arjs-loader').style.display = 'none';
+  });
+</script>
 </body>
 </html>
